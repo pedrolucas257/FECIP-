@@ -37,6 +37,7 @@
   "name":"BLANK GAME_2",
   "resources":[
     {"id":{"name":"ft_menu","path":"fonts/ft_menu/ft_menu.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
     {"id":{"name":"obj_coisa_ruim","path":"objects/obj_coisa_ruim/obj_coisa_ruim.yy",},},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},},
