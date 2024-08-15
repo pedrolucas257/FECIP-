@@ -1,6 +1,6 @@
 
 
-function draw_text_colour_outline(){
+function draw_text_colour_outline(){ // desenho da cor de texto ao redor 
 
 //Created by Andrew McCluskey http://nalgames.com/
 
@@ -42,7 +42,7 @@ function draw_text_colour_outline(){
 
 	}
 
-function ds_grid_add_item()
+function ds_grid_add_item() // adicionar item ao inventario 
 {// 3 Argumentos = item, quantidade e spr
 	
 	var _grid = obj_inventario.grid_itens
@@ -54,5 +54,22 @@ function ds_grid_add_item()
 	_grid[# 0, _checagem] = argument[0]
 	_grid[# 1, _checagem] = argument[1]
 	_grid[# 2, _checagem] = argument[2]
+	
+}
+
+function scr_fim_animacao()
+{
+	var _sprite = sprite_index
+	var _image = image_index
+	if argument_count > 0 _sprite = argument[0]
+	if argument_count > 1 _image = argument[1]
+	var _type = sprite_get_speed_type(sprite_index)
+	var _spd = sprite_get_speed(sprite_index)*image_index
+	if _type == spritespeed_framespergameframe
+	{
+		_spd = _spd / room_speed
+	}
+	if argument_count > 2 _spd = argument[2]
+	return _image + _spd = sprite_get_number(_sprite)
 	
 }

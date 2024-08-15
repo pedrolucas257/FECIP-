@@ -35,7 +35,7 @@ for( var i = 0; i< tam_menu; i++)
 			switch menu_i[i]
 			{
 				case menu_i[0]:
-					room_goto(R_fase1_parte1)
+					room_goto(R_fase1)
 					break
 				case menu_i[1]:
 					show_message("Vc clicou em opções")
