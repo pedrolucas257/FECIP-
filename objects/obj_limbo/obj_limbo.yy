@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_coisa_ruim",
+  "%Name":"obj_limbo",
   "eventList":[],
   "managed":true,
-  "name":"obj_coisa_ruim",
+  "name":"obj_limbo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"grupo2",
+    "path":"folders/Objetos/grupo2.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_limbo",
+    "path":"sprites/spr_limbo/spr_limbo.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

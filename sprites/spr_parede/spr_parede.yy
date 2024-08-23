@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"BLANK GAME_2",
-    "path":"BLANK GAME_2.yyp",
+    "name":"ELementos de fase",
+    "path":"folders/Sprites/ELementos de fase.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

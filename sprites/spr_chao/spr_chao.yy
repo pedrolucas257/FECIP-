@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"ELementos de fase",
+    "path":"folders/Sprites/ELementos de fase.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

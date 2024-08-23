@@ -9,7 +9,7 @@ hveloc = 0
 vveloc = 0
 veloc = 2.5
 
-vida_perso = new scr_vida(30) 
+vida_perso = new scr_vida(100) 
 
 alfa_hit = 0 
 
