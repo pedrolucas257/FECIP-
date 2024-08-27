@@ -6,8 +6,8 @@
   "name":"obj_parede",
   "overriddenProperties":[],
   "parent":{
-    "name":"grupo1",
-    "path":"folders/Objetos/grupo1.yy",
+    "name":"Fase 1",
+    "path":"folders/Objetos/Fase 1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

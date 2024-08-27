@@ -9,8 +9,8 @@
   "name":"obj_caixa",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Elementos de jogo",
+    "path":"folders/Objetos/Elementos de jogo.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,3 +6,6 @@ gravidade = 0.09
 
 vida = new scr_vida(3) 
 hveloc = 0
+
+gravity = 0.2
+vspeed = 0;

@@ -6,8 +6,8 @@
   "name":"obj_limbo",
   "overriddenProperties":[],
   "parent":{
-    "name":"grupo2",
-    "path":"folders/Objetos/grupo2.yy",
+    "name":"Elementos de jogo",
+    "path":"folders/Objetos/Elementos de jogo.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,3 +1,4 @@
+//batendo na parede
 if place_meeting(x, y, obj_parede){
  if direc == 0{
 	 direc = 1;

@@ -19,6 +19,7 @@ inventario_a = sprite_get_height(spr_inventario) * escala
 item_selecionado = -1
 pos_selecionada = -1 
 
+
 //enumerando itens
 enum Ingredientes
 {

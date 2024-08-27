@@ -1,0 +1,1 @@
+global.pressionado = false 
