@@ -1,6 +1,7 @@
 // ativações e configuraçoes iniciais
 inventario = false
 escala = 3 
+selecionado = false
 
 comeco_x = 15 * escala 
 comeco_y = 24 * escala

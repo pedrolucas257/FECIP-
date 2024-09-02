@@ -24,29 +24,33 @@ if (inventario == true)
 			draw_sprite_ext(spr_seletor, 0, _slotx, _sloty, escala, escala,0, c_white,1)
 			
 			//dropando do inventario 
-			if keyboard_check_pressed(ord("F")) and grid_itens[# Infos.Item, i] != -1
-			{
-				var _instancia = instance_create_layer(Obj_jogador.x, Obj_jogador.y, "Instances", obj_item)
-				_instancia.sprite_index = grid_itens[# Infos.Sprite, i]
-				_instancia.image_index = grid_itens[# Infos.Item, i]
-				_instancia.quantidade = grid_itens[# Infos.Quantidade, i]
+			if selecionado == false{
+				if keyboard_check_pressed(ord("F")) and grid_itens[# Infos.Item, i] != -1
+				{
+					var _instancia = instance_create_layer(Obj_jogador.x, Obj_jogador.y, "Instances", obj_item)
+					_instancia.sprite_index = grid_itens[# Infos.Sprite, i]
+					_instancia.image_index = grid_itens[# Infos.Item, i]
+					_instancia.quantidade = grid_itens[# Infos.Quantidade, i]
 				
-				//esvaziando slot 
-				grid_itens[# Infos.Item, i] = -1
-				grid_itens[# Infos.Quantidade, i] = -1
-				grid_itens[# Infos.Sprite, i] = -1
+					//esvaziando slot 
+					grid_itens[# Infos.Item, i] = -1
+					grid_itens[# Infos.Quantidade, i] = -1
+					grid_itens[# Infos.Sprite, i] = -1
+				}
 			}
 			
 			if mouse_check_button_pressed(mb_left)
 			{//caso n tenha item selecionado
 				if item_selecionado == -1
 				{
+					selecionado = false 
 					item_selecionado = grid_itens[# Infos.Item, i]
 					pos_selecionada = i 
 				}else{ //caso tenha
 				// 1- caso o item selecionado seja igual ao q nos vamos colocar = agrupar
 				if item_selecionado == grid_itens[# Infos.Item, i] and pos_selecionada != i and grid_itens[# Infos.Sprite, i] == grid_itens[# Infos.Sprite, pos_selecionada]
 				{
+					selecionado = true
 					grid_itens[# Infos.Quantidade, i] +=  grid_itens[# Infos.Quantidade,pos_selecionada]
 					
 					grid_itens[# Infos.Item, pos_selecionada] = -1

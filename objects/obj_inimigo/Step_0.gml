@@ -16,3 +16,15 @@ else if direc == 1{
 	sprite_index = spr_inimigo
 	x -= veloc;
 }
+//gravidade 
+// Aplicar gravidade
+if (!place_meeting(x,y + 5,obj_chao)) {
+    velocidade_vertical += gravidade; // Aumenta a velocidade de queda
+    if (velocidade_vertical > velocidade_maxima) {
+        velocidade_vertical = velocidade_maxima; // Limita a velocidade de queda
+    }
+} else {
+    velocidade_vertical = 0; // Reseta a velocidade vertical se estiver no chão
+}
+// Aplicar movimento vertical (queda)
+y += velocidade_vertical;

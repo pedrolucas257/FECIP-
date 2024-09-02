@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_inimigo",
     "path":"sprites/spr_inimigo/spr_inimigo.yy",

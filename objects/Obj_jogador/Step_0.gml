@@ -1,17 +1,11 @@
+
+if vida <= 0{instance_destroy(Obj_jogador)}
+if global.is_active == true{exit}
 script_execute(estado)
 
-setinha_cima = keyboard_check_pressed(vk_up)
 
-/*if place_meeting(x, y  + vveloc, obj_coisa_ruim)
-{
-	vida_perso.perder_vida(1)	
-}
-*/
-if setinha_cima
-{
-	vida_perso.ganhar_vida(5)
-}
 // if de criaçao da instancia do item solto no chão 
+#region
 if instance_exists(obj_item) and obj_inventario.inventario == false 
 {
 	var _instancia = instance_nearest(x,y, obj_item)
@@ -23,12 +17,14 @@ if instance_exists(obj_item) and obj_inventario.inventario == false
 		}
 	}
 }
+#endregion
 if keyboard_check_pressed(ord("R"))
 {
 	room_restart()
 }
 
 // destruindo caixa
+#region
 if (keyboard_check_pressed(ord("Q"))) {
 	
 	//distancia pra quebrar a caixa rs
@@ -44,3 +40,24 @@ if (keyboard_check_pressed(ord("Q"))) {
         caixa.exploding = true;
     }
 }
+#endregion
+
+//escada falhada
+#region
+if place_meeting(x,y,obj_escada){
+
+	if keyboard_check(ord("W")){
+		vveloc = -3;
+		gravidade = 0;
+	} else if keyboard_check(ord("S")){
+		vveloc=3;
+		gravidade = 0;
+	}
+	else{
+		vveloc = 0;
+	}
+}
+else{
+	gravidade = 0.09;
+}
+#endregion
