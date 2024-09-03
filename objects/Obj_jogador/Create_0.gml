@@ -13,6 +13,7 @@ veloc = 2.5
 vida = 5
 vida_atual = vida
 
-alfa_hit = 0 
+alfa_hit = 0
+alarm[0] = 0
 
-estado = scr_personagem_movendo
+estado =  scr_personagem_movendo

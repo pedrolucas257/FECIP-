@@ -3,6 +3,7 @@ function scr_personagem_movendo(){ // script personagem movendo
 	direita = keyboard_check(ord("D"))
 	esquerda =  keyboard_check(ord("A"))
 	cima = keyboard_check_pressed(ord("W"))
+	image_xscale = 1
 
 	hveloc = (direita - esquerda) * veloc
 	if direita
@@ -51,31 +52,40 @@ function scr_personagem_movendo(){ // script personagem movendo
 	x += hveloc
 	y += vveloc
 	
-	if keyboard_check_pressed(vk_space)
+	if mouse_check_button_pressed(mb_left)
 	{
-		image_index = 0 
+		image_index = 0
 		estado = scr_personagem_atacando
-		if direc == 0
-		{
-			instance_create_layer(x - 5 , y + 40, "Instances", obj_hitbox)
-		}else if direc == 1
-		{
-			instance_create_layer(x - 10, y + 40, "Instances", obj_hitbox)
-		}
 	}
 }
 
 function scr_personagem_atacando(){
-	
+	//estado ataque
 	if direc == 0
 	{
-		sprite_index = spr_personagem_atacando_direita
-	}else if direc == 1{ 
+		instance_create_layer(x + 35,y, "Instances",obj_hitbox)
+		sprite_index = spr_atacando_d
+		if image_index >= image_number - 1
+		{
+			estado = scr_personagem_movendo
+			if instance_exists(obj_hitbox)
+			{
+				instance_destroy(obj_hitbox)
+			}
+		}
+	}
+	if direc == 1
+	{
+		instance_create_layer(x - 35,y, "Instances",obj_hitbox)
 		sprite_index = spr_atacando_esquerda
+		if image_index >= image_number - 1
+		{
+			estado = scr_personagem_movendo
+			if instance_exists(obj_hitbox)
+			{
+				instance_destroy(obj_hitbox)
+			}
+		}
 	}
 	
-	if scr_fim_animacao
-	{
-		estado = scr_personagem_movendo
-	}
 }

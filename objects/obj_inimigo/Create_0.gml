@@ -6,6 +6,7 @@ gravidade = 0.09
 
 hveloc = 0
 
+vida = 3
 
 velocidade_horizontal = 2; // Velocidade do movimento horizontal
 dir = 1; // Direção do movimento (1 para direita, -1 para esquerda)
