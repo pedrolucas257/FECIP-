@@ -28,3 +28,4 @@ if (!place_meeting(x,y + 5,obj_chao)) {
 }
 // Aplicar movimento vertical (queda)
 y += velocidade_vertical;
+

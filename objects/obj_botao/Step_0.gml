@@ -5,5 +5,5 @@ if place_meeting(x,y,Obj_jogador)
 
 if global.pressionado == true
 {
-	image_index = 1 
+	image_index = 2 
 }else{image_index = 0}

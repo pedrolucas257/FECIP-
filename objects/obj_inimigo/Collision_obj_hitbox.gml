@@ -1,9 +1,8 @@
-if place_meeting(x,y, obj_hitbox)
-{
+if alarm[0] <= 0{
 	vida -= 1
+	alarm[0] = 30
 }
-
 if vida <= 0
 {
-	instance_destroy(obj_inimigo)
+	instance_destroy()
 }
